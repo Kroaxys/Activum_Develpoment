@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG1_MAUI_ERP_Activum.View.LoginPage"
              Title="LoginPage">
-    <Grid RowDefinitions="35,30,45,30,45,45,450, 45"
-          ColumnDefinitions="498, 498, *"
-          Margin="20 20"
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*, 45"
+          ColumnDefinitions=".33*, .33*, .33*"
+          RowSpacing="10"
+          Padding="20"
           >
 
         <Label Text="Welcome back"
@@ -26,7 +27,7 @@
         <Label Text="@activum.se"
                Grid.Row="2"
                Grid.Column="3"
-               Margin="0,10,0,0"
+               VerticalOptions="Center"
                
                />
 
@@ -46,8 +47,7 @@
             />
 
         <Button Grid.Row="7"
-                Grid.Column="0"
-                Margin="0,0,0,0 "/>
+                Grid.Column="0"/>
         <Image Grid.Row="7"
                 Grid.Column="2"/>
 
