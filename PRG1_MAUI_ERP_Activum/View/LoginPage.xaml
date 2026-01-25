@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG1_MAUI_ERP_Activum.View.LoginPage"
-             Title="LoginPage">
+             Title="LoginPage"
+             BackgroundImageSource="bakgrund_2.png">
+    
     <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*, 45"
           ColumnDefinitions=".33*, .33*, .33*"
           RowSpacing="10"
@@ -42,14 +44,19 @@
             />
 
         <Button
+            Text="Login"
             Grid.Row="5"
             Grid.Column="1"
             />
 
-        <Button Grid.Row="7"
+        <Button Text="Hjälp"
+                Grid.Row="7"
                 Grid.Column="0"/>
-        <Image Grid.Row="7"
-                Grid.Column="2"/>
+        <Image Source="logga_activum_vit.png"
+                Grid.Row="7"
+                Grid.Column="2"
+               HorizontalOptions="End"
+               />
 
     </Grid>
 </ContentPage>
