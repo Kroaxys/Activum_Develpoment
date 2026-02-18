@@ -5,7 +5,7 @@
              Title="Traktamenten"
              BackgroundImageSource="bakgrund_2.png">
     
-    <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,*" ColumnDefinitions="*,*,*" Padding="10" > 
+    <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,*" ColumnDefinitions="*,*,*" Padding="10" RowSpacing="10" ColumnSpacing="10"> 
         <!--12 collumn 3 row-->
         <Label Grid.Row="0" Grid.Column="0" Text="Datum - Start"/>
         <Entry Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
