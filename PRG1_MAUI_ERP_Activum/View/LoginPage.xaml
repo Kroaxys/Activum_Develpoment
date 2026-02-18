@@ -8,7 +8,7 @@
     <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*, 45"
           ColumnDefinitions=".33*, .33*, .33*"
           RowSpacing="10"
-          Padding="20"
+          Padding="10"
           >
 
         <Label Text="Welcome back"
