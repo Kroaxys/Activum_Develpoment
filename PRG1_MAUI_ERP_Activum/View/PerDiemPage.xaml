@@ -2,10 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG1_MAUI_ERP_Activum.View.PerDiemPage"
-             Title="Traktamenten">
-    <Grid>
-        
-        
-        
+             Title="Traktamenten"
+             BackgroundImageSource="bakgrund_2.png">
+    
+    <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,*" ColumnDefinitions="*,*,*" Padding="10" > 
+        <!--12 collumn 3 row-->
+        <Label Grid.Row="0" Grid.Column="0" Text="Datum - Start"/>
+        <Entry Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <DatePicker Grid.Row="1" Grid.Column="2" DateSelected="StartDate"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Text="Datum - Slut"/>
+        <Entry Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/> 
+        <DatePicker Grid.Row="3" Grid.Column="2" DateSelected="EndDate"/>
+
+        <Label Grid.Row="4" Grid.Column="0" Text="Frukost"/>
+        <Entry Grid.Row="5" Grid.Column="0" Keyboard="Numeric"/>
+        <Label Grid.Row="4" Grid.Column="1" Text="Lunch"/>
+        <Entry Grid.Row="5" Grid.Column="1" Keyboard="Numeric"/>
+        <Label Grid.Row="4" Grid.Column="2" Text="Middag"/>
+        <Entry Grid.Row="5" Grid.Column="2" Keyboard="Numeric"/>
+
+        <Label Grid.Row="6" Grid.Column="0" Text="Distans körd"/>
+        <Entry Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" Keyboard="Numeric"/>
+
+        <Label Grid.Row="8" Grid.Column="0" Text="Bil användt"/>
+        <Picker Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+        <Button Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3" Text="Send It" Clicked="SubmitButtonClicked"/>
+        <Image Source="logga_activum_vit.png" Grid.Row="11" Grid.Column="2" HorizontalOptions="End"/>
+
     </Grid>
 </ContentPage>
