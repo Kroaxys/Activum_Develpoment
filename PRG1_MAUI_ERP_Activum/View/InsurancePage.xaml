@@ -8,7 +8,7 @@
         RowDefinitions="auto,auto,auto,auto,*,45"
         ColumnDefinitions="*"
         RowSpacing="10"
-        Padding="20"
+        Padding="10"
         >
 
         <Label
@@ -30,7 +30,7 @@
             Grid.Column="0"
             />
         <Label
-            Text="efsfsf"
+            Text=""
             Grid.Row="3"
             Grid.Column="0"
             Margin="0,50"
