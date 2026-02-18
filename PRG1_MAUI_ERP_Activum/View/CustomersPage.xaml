@@ -7,7 +7,6 @@
         <Label
             Padding="20"
             Text="Kunder"
-            TextColor="Red"
             Style="{StaticResource Headline}"
             SemanticProperties.HeadingLevel="Level1"
             VerticalOptions="Center" 
