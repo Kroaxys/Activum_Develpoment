@@ -13,19 +13,24 @@
             
             <Label Grid.Row="1" Grid.Column="0"
                    Text="Kundnummer / Personnummer"/>
-            <Label Grid.Row="1" Grid.Column="1"/>
+            <Label Grid.Row="1" Grid.Column="1"
+                   Text="Kund information"/>
 
             <Entry Grid.Row="2" Grid.Column="0"/>
-            <Label Grid.Row="2" Grid.Column="1"/>
+            <Label Grid.Row="2" Grid.Column="1" Grid.RowSpan="4"/>
 
 
-            <Label Grid.Row="3" Grid.Column="0"/>
+            <Entry Grid.Row="3" Grid.Column="0"
+                   Placeholder="Försäkring Anmälan"/>
             
             <DatePicker Grid.Row="4" Grid.Column="0"/>
 
-            <Button Grid.Row="5" Grid.Column="0"/>
+            <Button Grid.Row="5" Grid.Column="0" 
+                    Text="Confirm"/>
 
-            <Image Grid.Row="7" Grid.Column="1"/>
+            <Image Grid.Row="7" Grid.Column="1"
+                   HorizontalOptions="End"
+                   Source="logga_activum_vit.png"/>
 
             <!--Date="{x:Static sys:DateTime.Today}" />-->
         </Grid>
