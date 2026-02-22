@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG1_MAUI_ERP_Activum.View.AboutPage"
              Title="Om oss">
-    <Grid ColumnDefinitions="*,*" RowDefinitions="auto,auto,auto,auto" Padding="10">
+    <Grid ColumnDefinitions="*,*" RowDefinitions="auto,auto,auto,auto,*,45" Padding="10">
 
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource Headline}" HorizontalTextAlignment="Center" Text="Om oss"/>
 
@@ -16,5 +16,6 @@
         <ImageButton Grid.Row="3" Grid.Column="0" MaximumHeightRequest="50" MaximumWidthRequest="50" BackgroundColor="Transparent" BorderColor="Black" Source="github_white.png"/>
         <ImageButton Grid.Row="3" Grid.Column="1" MaximumHeightRequest="50" MaximumWidthRequest="50" BackgroundColor="Transparent" Source="github_white.png"/>
 
+        <Image Source="github_white.png" Grid.Row="5" Grid.Column="1" HorizontalOptions="End" VerticalOptions="End"/>
     </Grid>
 </ContentPage>
