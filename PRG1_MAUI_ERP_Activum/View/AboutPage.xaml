@@ -16,6 +16,6 @@
         <ImageButton Grid.Row="3" Grid.Column="0" MaximumHeightRequest="50" MaximumWidthRequest="50" BackgroundColor="Transparent" BorderColor="Black" Source="github_white.png"/>
         <ImageButton Grid.Row="3" Grid.Column="1" MaximumHeightRequest="50" MaximumWidthRequest="50" BackgroundColor="Transparent" Source="github_white.png"/>
 
-        <Image Source="github_white.png" Grid.Row="5" Grid.Column="1" HorizontalOptions="End" VerticalOptions="End"/>
+        <Image Source="logga_activum_vit.png" Grid.Row="5" Grid.Column="1" HorizontalOptions="End" VerticalOptions="End"/>
     </Grid>
 </ContentPage>
