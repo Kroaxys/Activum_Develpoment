@@ -12,7 +12,7 @@
         >
 
         <Label
-            Text="Personnr/Kundnr"
+            Text="Kundnummer / Personnummer"
             FontSize="Medium"
             Grid.Row="0"
             Grid.Column="0"
