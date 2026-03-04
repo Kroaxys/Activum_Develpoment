@@ -30,9 +30,13 @@
             <Label HorizontalTextAlignment="Center" Text="Next payout date: "/>
             <Label HorizontalTextAlignment="Center" Text="0"/>
         </VerticalStackLayout>
-        
-        
-        
+
+        <Image Grid.Row="6" Grid.Column="0" 
+               HorizontalOptions="End" VerticalOptions="End"
+               Source="logga_activum_vit.png"/>
+
+
+
 
     </Grid>
 </ContentPage>
