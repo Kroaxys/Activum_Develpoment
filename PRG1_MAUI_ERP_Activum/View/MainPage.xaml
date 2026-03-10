@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="PRG1_MAUI_ERP_Activum.View.MainPage"
-             Title="Start">
+             Title="Start"
+             BackgroundImageSource="bakgrund_2.png">
 
     <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*,45" ColumnDefinitions="*,*" Padding="10" RowSpacing="10">
-        <!--8 Rows, 2 Column-->
+        <!--9 Rows, 2 Column-->
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                    Style="{StaticResource Headline}" HorizontalTextAlignment="Center"
                    Text="Välkommen"/>
