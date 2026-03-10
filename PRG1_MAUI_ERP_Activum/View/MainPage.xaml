@@ -4,35 +4,36 @@
              xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="PRG1_MAUI_ERP_Activum.View.MainPage"
              Title="Start">
-    
-        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*,45" ColumnDefinitions="*,*" Padding="10" RowSpacing="10">
-            <!--8 Rows, 2 Column-->
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*,45" ColumnDefinitions="*,*" Padding="10" RowSpacing="10">
+        <!--8 Rows, 2 Column-->
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                    Style="{StaticResource Headline}" HorizontalTextAlignment="Center"
                    Text="Välkommen"/>
-            
-            <Label Grid.Row="1" Grid.Column="0"
+
+        <Label Grid.Row="1" Grid.Column="0"
                    Text="Kundnummer / Personnummer"/>
-            <Label Grid.Row="1" Grid.Column="1"
+        <Label Grid.Row="1" Grid.Column="1"
                    Text="Kund information"/>
 
-            <Entry Grid.Row="2" Grid.Column="0"/>
-            <Label Grid.Row="2" Grid.Column="1" Grid.RowSpan="4"/>
+        <Entry Grid.Row="2" Grid.Column="0"
+               Placeholder="yyyy-mm-dd-xxxx"/>
+        <Label Grid.Row="2" Grid.Column="1" Grid.RowSpan="4" />
 
+        <Label Grid.Row="3" Grid.Column="0"
+               Text="Försäkring Anmälan"/>
 
-            <Entry Grid.Row="3" Grid.Column="0"
-                   Placeholder="Försäkring Anmälan"/>
-            
-            <DatePicker Grid.Row="4" Grid.Column="0"
+        <Entry Grid.Row="4" Grid.Column="0"/>
+
+        <DatePicker Grid.Row="5" Grid.Column="0"
                         Date="{x:Static sys:DateTime.Today}"/>
 
-            <Button Grid.Row="5" Grid.Column="0" 
-                    Text="Confirm"/>
+        <Button Grid.Row="6" Grid.Column="0" Text="Confirm"/>
 
-        <Image Grid.Row="7" Grid.Column="1"
+        <Image Grid.Row="8" Grid.Column="1"
                    HorizontalOptions="End"
                    Source="logga_activum_vit.png"/>
     </Grid>
-   
+
 
 </ContentPage>
