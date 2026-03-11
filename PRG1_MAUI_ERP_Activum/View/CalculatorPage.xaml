@@ -2,12 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG1_MAUI_ERP_Activum.View.CalculatorPage"
-             Title="Kalkylator">
-    <Grid RowDefinitions="Auto, *, *, *, *, *, *"
-      ColumnDefinitions="*, *, *, *"
-      Padding="20"
-      ColumnSpacing="2"
-      RowSpacing="2">
+             Title="Kalkylator"
+             BackgroundImageSource="bakgrund_2.png">
+    <Grid RowDefinitions="Auto,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*"
+      Padding="20" ColumnSpacing="2" RowSpacing="2">
         <!-- Display för beräkningar -->
         <Entry x:Name="EntryCalculations"
            Grid.Row="0"
@@ -33,9 +31,7 @@
            HorizontalTextAlignment="End"/>
 
         <!-- Rad 1 -->
-        <Button Grid.Row="2" Grid.Column="0" Text="C" Clicked="ClearButton" />
-        <Button Grid.Row="2" Grid.Column="1" Text="M+" Clicked="StoreInMemoryButton" />
-        <Button Grid.Row="2" Grid.Column="2" Text="M-" Clicked="CatchFromMemoryButton" />
+        <Button Grid.Row="2" Grid.Column="2" Text="C" Clicked="ClearButton" />
         <Button Grid.Row="2" Grid.Column="3" Text="/" Clicked="OperatorButton" />
 
         <!-- Rad 2 -->
