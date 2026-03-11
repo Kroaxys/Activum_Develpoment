@@ -3,13 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG1_MAUI_ERP_Activum.View.SupportPage"
              Title="Hjälp &amp; Support">
-    <VerticalStackLayout>
-        <Label
-            Padding="20"
-            Text="Hjälp &amp; Support"
-            Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid ColumnDefinitions="*, *" RowDefinitions="*, *">
+        
+        <Image Source="bakgrund_2.png" 
+           Aspect="AspectFill"
+           Grid.RowSpan="2" 
+           Grid.ColumnSpan="2"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill" />
+        <Button
+            Grid.Column="0"
+            Grid.Row="0"
+            VerticalOptions="Fill" 
+            HorizontalOptions="Fill" 
+            BackgroundColor="#60134f5c"
+            Margin="5"
+            ImageSource="touch.png"/>
+        <Button
+    Grid.Column="1"
+    Grid.Row="0"
+    VerticalOptions="Fill" 
+    HorizontalOptions="Fill" 
+    BackgroundColor="#60134f5c"
+    Margin="5"
+    ImageSource="contact.png"/>
+
+        <Button
+    Grid.Column="0"
+    Grid.Row="1"
+    VerticalOptions="Fill" 
+    HorizontalOptions="Fill" 
+    BackgroundColor="#60134f5c"
+    Margin="5"
+    ImageSource="question.png"/>
+        <Button
+    Grid.Column="1"
+    Grid.Row="1"
+    VerticalOptions="Fill" 
+    HorizontalOptions="Fill" 
+    BackgroundColor="#60134f5c"
+    Margin="5"
+    ImageSource="emergency_call.png"/>
+    </Grid>
 </ContentPage>

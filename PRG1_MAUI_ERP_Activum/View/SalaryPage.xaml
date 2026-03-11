@@ -2,14 +2,40 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG1_MAUI_ERP_Activum.View.SalaryPage"
-             Title="Lön &amp; Bonus">
-    <VerticalStackLayout>
-        <Label
-            Padding="20"
-            Text="Lön &amp; Bonus"
-            Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Lön &amp; Bonus"
+             BackgroundImageSource="bakgrund_2.png">
+    
+    <Grid RowDefinitions="auto,auto,auto,auto,auto,*,45" ColumnDefinitions="*" Padding="10" RowSpacing="10">
+
+        <VerticalStackLayout Grid.Row="0" Grid.Column="0">
+            <Label HorizontalTextAlignment="Center" Text="Commisson earned this month:"/>
+            <Label HorizontalTextAlignment="Center" Text="0 kr"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1" Grid.Column="0">
+            <Label HorizontalTextAlignment="Center" Text="Total earned this year:"/>
+            <Label HorizontalTextAlignment="Center" Text="0 kr"/>
+        </VerticalStackLayout>
+        
+
+        <VerticalStackLayout Grid.Row="2" Grid.Column="0">
+            <Label HorizontalTextAlignment="Center" Text="Commission rate:"/>
+            <Label HorizontalTextAlignment="Center" Text="0 kr"/>
+        </VerticalStackLayout>  
+
+        <VerticalStackLayout Grid.Row="3" Grid.Column="0">
+            <Label HorizontalTextAlignment="Center" Text="Base salary"/>
+            <Label HorizontalTextAlignment="Center" Text="30 000 kr"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="4" Grid.Column="0">
+            <Label HorizontalTextAlignment="Center" Text="Next payout date: "/>
+            <Label HorizontalTextAlignment="Center" Text="0"/>
+        </VerticalStackLayout>
+
+        <Image Grid.Row="6" Grid.Column="0" 
+               HorizontalOptions="End" VerticalOptions="End"
+               Source="logga_activum_vit.png"/>
+        
+    </Grid>
 </ContentPage>

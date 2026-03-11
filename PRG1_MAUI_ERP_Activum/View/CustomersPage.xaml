@@ -2,14 +2,107 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG1_MAUI_ERP_Activum.View.CustomersPage"
+             BackgroundImageSource="bakgrund_2.png"
              Title="Kunder">
-    <VerticalStackLayout>
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto, auto,*, 45" ColumnDefinitions="Auto,*, auto">
         <Label
-            Padding="20"
-            Text="Kunder"
-            Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            Margin="10 30 1 30"
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="Kund"
+            FontSize="Large"
+            FontFamily="NotoSerifGeorgian-VariableFont"/>
+        
+        <Label
+            Margin="10 30 10 30"
+            Text="Personnr/Kundnr"
+            FontSize="Large"
+            Grid.Row="1"
+            Grid.Column="0"
+            WidthRequest="300"
+            FontFamily="NotoSerifGeorgian-VariableFont"/>
+        <Label
+            Margin="1 30 1 30"
+            Text="För ny kund, skriv: 000000-XX00"
+            FontSize="Caption"
+            Grid.Row="2"
+            Grid.Column="0"
+            TextColor="#A11D33"
+            FontFamily="NotoSerifGeorgian-VariableFont"/>
+
+        <Entry
+            Margin="1 30 10 30"
+            Grid.Column="0"
+            Grid.Row="3"
+            Text="ddmmyy-XXXX"
+            TextColor="Gray"
+            BackgroundColor="White"
+            FontFamily="NotoSerifGeorgian-VariableFont"/>
+
+        <Button
+            Margin="10 30 10 30"
+            Grid.Row="4"
+            Grid.Column="0"
+            Text="Sök"
+            FontFamily="NotoSerifGeorgian-VariableFont"
+            BackgroundColor="#000000"
+            TextColor="#FFFFFF"
+            />
+        <Label
+            Text="Ny Försäkring"
+             Margin="10 30 10 30"
+             Grid.Row="5"
+             Grid.Column="0"
+             FontSize="Large"
+             FontFamily="NotoSerifGeorgian-VariableFont"/>
+        <Entry
+            Margin="10 30 10 30"
+            Grid.Row="6"
+            Grid.Column="0"
+            Text="Försäkrings Ansökan"
+            TextColor="Gray"
+            BackgroundColor="White"
+            FontSize="Medium"
+            FontFamily="NotoSerifGeorgian-VariableFont"/>
+        <Entry
+            Margin="10 30 10 30"
+            Grid.Column="0"
+            Grid.Row="7"
+            Text="Försäkrings Nummer"
+            TextColor="Gray"
+            BackgroundColor="White"
+            FontSize="Medium"
+            FontFamily="NotoSerifGeorgian-VariableFont"/>
+        
+        <DatePicker
+            Margin="10 30 10 30"
+            Grid.Row="8"
+            Grid.Column="0"
+            FontFamily="NotoSerifGeorgian-VariableFont"/>
+        <Button
+            Margin="15 30 15 30"
+            Grid.Row="9"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Text="Skapa"
+            FontFamily="NotoSerifGeorgian-VariableFont"
+            BackgroundColor="#000000"
+            TextColor="#FFFFFF"
+            />
+        <Label
+            Margin="50"
+            Grid.RowSpan="9"
+            Grid.Column="1"
+            HeightRequest="500"
+            WidthRequest="500"
+            FontFamily="NotoSerifGeorgian-VariableFont"
+            />
+        <Image
+            Grid.Row="10"
+            VerticalOptions="End"
+            Grid.Column="2"
+            Source="logga_activum_vit.png"
+            HorizontalOptions="End"
+            />
+    </Grid>
 </ContentPage>

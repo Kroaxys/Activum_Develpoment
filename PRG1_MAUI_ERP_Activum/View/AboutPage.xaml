@@ -2,14 +2,36 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG1_MAUI_ERP_Activum.View.AboutPage"
-             Title="Om Macrosoft">
-    <VerticalStackLayout>
-        <Label
-            Padding="20"
-            Text="Om Macrosoft"
-            Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Om oss"
+             BackgroundImageSource="bakgrund_2.png">
+    <Grid ColumnDefinitions="*,*" RowDefinitions="auto,auto,auto,auto,*,45" Padding="10" RowSpacing="10">
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+               Style="{StaticResource Headline}" HorizontalTextAlignment="Center" Text="Om oss"/>
+
+        <Label Grid.Row="1" Grid.Column="0" 
+               Style="{StaticResource SubHeadline}" HorizontalTextAlignment="Center" 
+               Text="Kroaxys"/>
+        <Label Grid.Row="1" Grid.Column="1" 
+               Style="{StaticResource SubHeadline}" HorizontalTextAlignment="Center" 
+               Text="BuyMatas"/>
+
+        <Label Grid.Row="2" Grid.Column="0" 
+               MaximumWidthRequest="400" HorizontalOptions="Center" 
+               Text=""/>
+        <Label Grid.Row="2" Grid.Column="1" 
+               MaximumWidthRequest="400" HorizontalOptions="Center" 
+               Text=""/>
+
+        <ImageButton Grid.Row="3" Grid.Column="0" 
+                     MaximumHeightRequest="50" MaximumWidthRequest="50" 
+                     BackgroundColor="Transparent" Source="github_white.png"/>
+        <ImageButton Grid.Row="3" Grid.Column="1" 
+                     MaximumHeightRequest="50" MaximumWidthRequest="50" 
+                     BackgroundColor="Transparent" Source="github_white.png"/>
+
+        <Image Grid.Row="5" Grid.Column="1" 
+               HorizontalOptions="End" VerticalOptions="End"
+               Source="logga_activum_vit.png"/>
+    </Grid>
 </ContentPage>
