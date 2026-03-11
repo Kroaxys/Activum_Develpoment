@@ -29,7 +29,7 @@
         <DatePicker Grid.Row="5" Grid.Column="0"
                         Date="{x:Static sys:DateTime.Today}"/>
 
-        <Button Grid.Row="6" Grid.Column="0" Text="Confirm"/>
+        <Button Grid.Row="6" Grid.Column="0" Text="Skicka"/>
 
         <Image Grid.Row="8" Grid.Column="1"
                    HorizontalOptions="End"
