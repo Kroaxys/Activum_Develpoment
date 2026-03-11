@@ -8,28 +8,28 @@
     <Grid RowDefinitions="auto,auto,auto,auto,auto,*,45" ColumnDefinitions="*" Padding="10" RowSpacing="10">
 
         <VerticalStackLayout Grid.Row="0" Grid.Column="0">
-            <Label HorizontalTextAlignment="Center" Text="Commisson earned this month:"/>
+            <Label HorizontalTextAlignment="Center" Text="Provision intjänad denna månad:"/>
             <Label HorizontalTextAlignment="Center" Text="0 kr"/>
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="1" Grid.Column="0">
-            <Label HorizontalTextAlignment="Center" Text="Total earned this year:"/>
+            <Label HorizontalTextAlignment="Center" Text="Totalt intjänat i år:"/>
             <Label HorizontalTextAlignment="Center" Text="0 kr"/>
         </VerticalStackLayout>
         
 
         <VerticalStackLayout Grid.Row="2" Grid.Column="0">
-            <Label HorizontalTextAlignment="Center" Text="Commission rate:"/>
+            <Label HorizontalTextAlignment="Center" Text="Provision:"/>
             <Label HorizontalTextAlignment="Center" Text="0 kr"/>
         </VerticalStackLayout>  
 
         <VerticalStackLayout Grid.Row="3" Grid.Column="0">
-            <Label HorizontalTextAlignment="Center" Text="Base salary"/>
+            <Label HorizontalTextAlignment="Center" Text="Grundlön"/>
             <Label HorizontalTextAlignment="Center" Text="30 000 kr"/>
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="4" Grid.Column="0">
-            <Label HorizontalTextAlignment="Center" Text="Next payout date: "/>
+            <Label HorizontalTextAlignment="Center" Text="Nästa utbetalningsdatum: "/>
             <Label HorizontalTextAlignment="Center" Text="0"/>
         </VerticalStackLayout>
 

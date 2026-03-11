@@ -11,7 +11,7 @@
           Padding="10"
           >
 
-        <Label Text="Welcome back"
+        <Label Text="Välkommen tillbacka"
                Grid.Row="0"
                Grid.Column="0"
                Grid.ColumnSpan="3"
@@ -35,7 +35,7 @@
                
                />
 
-        <Label Text="Password"
+        <Label Text="Lösenord"
                Grid.Row="3"
                Grid.Column="0"
                />
