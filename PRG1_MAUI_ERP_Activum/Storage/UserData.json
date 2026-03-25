@@ -1,0 +1,13 @@
+{
+  "employees": [
+    {
+      "BaseSalary": 26500,
+      "CommissionEarnedThisMonth": 0,
+      "CommissionRate": 0.05,
+      "Email": "example@example.com",
+      "Name": "John Doe",
+      "Password": "password",
+      "TotalEarnedThisYear": 0
+    }
+  ]
+}
