@@ -19,11 +19,12 @@ public partial class SalaryPage : ContentPage
         Load();
     }
 
+    //We Need To Convert It To Something That Can Handle The Json File
 	private void Load()
 	{
         string json = File.ReadAllText(path);
-        //ObservableCollection<Employee> employees = JsonSerializer.Deserialize<ObservableCollection<Employee>>(json);
-        //Debug.WriteLine(employees[0]);
+        ObservableCollection<Employee> employees = JsonSerializer.Deserialize<ObservableCollection<Employee>>(json);
+        Debug.WriteLine(employees[0]);
         Debug.WriteLine(json);
     }
 }
