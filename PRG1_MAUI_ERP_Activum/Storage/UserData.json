@@ -1,12 +1,29 @@
 [
   {
     "BaseSalary": 26500,
-    "CommissionEarnedThisMonth": 0,
+    "CommissionEarnedThisMonth": 1000,
     "CommissionRate": 0.05,
     "Email": "example@example.com",
     "Name": "John Doe",
     "Password": "password",
-    "TotalEarnedThisYear": 0
-
+    "TotalEarnedThisYear": 356000
+  },
+  {
+    "BaseSalary": 30000,
+    "CommissionEarnedThisMonth": 3000,
+    "CommissionRate": 0.05,
+    "Email": "maria@example.com",
+    "Name": "Maria Doe",
+    "Password": "password",
+    "TotalEarnedThisYear": 500000
+  },
+  {
+    "BaseSalary": 26500,
+    "CommissionEarnedThisMonth": 500,
+    "CommissionRate": 0.05,
+    "Email": "Jane@example.com",
+    "Name": "Jane Doe",
+    "Password": "password",
+    "TotalEarnedThisYear": 100000
   }
 ]

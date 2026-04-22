@@ -9,23 +9,23 @@
 
         <VerticalStackLayout Grid.Row="0" Grid.Column="0">
             <Label HorizontalTextAlignment="Center" Text="Provision intjänad denna månad:"/>
-            <Label HorizontalTextAlignment="Center" Text="0 kr"/>
+            <Label HorizontalTextAlignment="Center" Text="0 kr" x:Name="CommissionEarnedThisMonthLabel"/>
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="1" Grid.Column="0">
             <Label HorizontalTextAlignment="Center" Text="Totalt intjänat i år:"/>
-            <Label HorizontalTextAlignment="Center" Text="0 kr"/>
+            <Label HorizontalTextAlignment="Center" Text="0 kr" x:Name="TotalEarnedThisYearLabel"/>
         </VerticalStackLayout>
         
 
         <VerticalStackLayout Grid.Row="2" Grid.Column="0">
             <Label HorizontalTextAlignment="Center" Text="Provision:"/>
-            <Label HorizontalTextAlignment="Center" Text="0 kr"/>
+            <Label HorizontalTextAlignment="Center" Text="0 kr" x:Name="CommissionRateLabel"/>
         </VerticalStackLayout>  
 
         <VerticalStackLayout Grid.Row="3" Grid.Column="0">
             <Label HorizontalTextAlignment="Center" Text="Grundlön"/>
-            <Label HorizontalTextAlignment="Center" Text="30 000 kr"/>
+            <Label HorizontalTextAlignment="Center" Text="30 000 kr" x:Name="BaseSalaryLabel"/>
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="4" Grid.Column="0">

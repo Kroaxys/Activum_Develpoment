@@ -6,25 +6,35 @@ using System.Text.Json;
 
 public partial class SalaryPage : ContentPage
 {
+    Employee employee;
     string path;
 	public SalaryPage()
 	{
 		InitializeComponent();
-		int CurrentUser = SalaryPageClass.CurrentUser;
-		Debug.WriteLine(CurrentUser);
-        string basePath = Directory.GetCurrentDirectory();
-        string shortendPath = Directory.GetParent(basePath).Parent.Parent.Parent.FullName;
-        path = Path.Combine(shortendPath, "Storage", "UserData.json");
-        Debug.WriteLine(path);
+        GetPath();
         Load();
+        Serve();
     }
 
     //We Need To Convert It To Something That Can Handle The Json File
+    private void GetPath()
+    {
+        path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, "Storage", "UserData.json");
+    }
 	private void Load()
 	{
         string json = File.ReadAllText(path);
         ObservableCollection<Employee> employees = JsonSerializer.Deserialize<ObservableCollection<Employee>>(json);
-        Debug.WriteLine(employees[0]);
+        employee = employees[SalaryPageClass.CurrentUser];
+        Debug.WriteLine(employee.Name);
+        Debug.WriteLine(employee.BaseSalary);
         Debug.WriteLine(json);
+    }
+    private void Serve()
+    {
+        CommissionEarnedThisMonthLabel.Text = employee.CommissionEarnedThisMonth.ToString();
+        CommissionRateLabel.Text = employee.CommissionRate.ToString();
+        BaseSalaryLabel.Text = employee.BaseSalary.ToString();
+        TotalEarnedThisYearLabel.Text = employee.TotalEarnedThisYear.ToString();
     }
 }
