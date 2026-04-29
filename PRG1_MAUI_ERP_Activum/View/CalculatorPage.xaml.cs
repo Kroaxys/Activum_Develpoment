@@ -1,112 +1,126 @@
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+
 namespace PRG1_MAUI_ERP_Activum.View;
 
 public partial class CalculatorPage : ContentPage
 {
-	public CalculatorPage()
+    double FirstNumber;
+    double LastNumber;
+    string HiddenOperator;
+    double HiddenNumber;
+    public CalculatorPage()
 	{
 		InitializeComponent();
 	}
 
-    private double accumulator = 0;
-    private double operand = 0;
-    private string operation = "";
-
-    // hantering för numeriska knappar
-    private void NumberButton(object sender, EventArgs e)
+    private void OnNumberClicked(object sender, EventArgs e)
     {
-        Button button = (Button)sender;
+        Button OnNumberClicked = (Button)sender;
+        DisplayLabel.Text += OnNumberClicked.Text;
+        HiddenOperator += OnNumberClicked.Text;
 
-        // Bygg upp operand baserat på knapptexten (t.ex. "1", "2")
-        operand = (operand * 10) + Convert.ToDouble(button.Text);
-
-        EntryCalculations.Text += button.Text;
-        EntryResult.Text = operand.ToString();
     }
 
-
-    // hantering för operator-knappar (+, -, *, /)
-    private void OperatorButton(object sender, EventArgs e)
+    public void OnOperatorClicked(object sender, EventArgs e)
     {
-        if (operation != "") // Utför beräkning om en tidigare operation finns
+        if (!double.TryParse(HiddenOperator, out double working))
         {
-            Calculate();
+            DisplayLabel.Text = "Error: Invalid Input";
+            return;
         }
-        else
+        if (HiddenOperator.Contains("+"))
         {
-            accumulator = operand; // Spara första talet i accumulator
+            DisplayLabel.Text = "Error: No Number Entered";
+            return;
         }
 
-        operand = 0;
-
-        Button button = (Button)sender;
-        operation = button.Text;
-
-        EntryCalculations.Text += $" {operation} ";
+        FirstNumber = working;
+        Button OnOperatorClicked = (Button)sender;
+        DisplayLabel.Text += OnOperatorClicked.Text;
+        HiddenOperator = "";
     }
 
-
-    private void EqualButton(object sender, EventArgs e)
+    public void OnCalculateClicked(object sender, EventArgs e)
     {
-        Calculate();
-
-        EntryResult.Text = accumulator.ToString();
-        EntryCalculations.Text = accumulator.ToString();
-
-        operation = "";
-        operand = 0;
-    }
-
-
-    private void Calculate()
-    {
-        switch (operation)
+        if (!double.TryParse(HiddenOperator, out double working))
         {
-            case "+":
-                accumulator += operand;
-                break;
-            case "-":
-                accumulator -= operand;
-                break;
-            case "*":
-                accumulator *= operand;
-                break;
-            case "/":
-                if (operand == 0) // Hantera division med noll
-                {
-                    DisplayAlertAsync("Fel!", "Division med noll är ej tillåtet.", "OK");
-                    Clear();
-                    return;
-                }
-                accumulator /= operand;
-                break;
+            DisplayLabel.Text = "Error: Invalid Input";
+            return;
+        }
+        LastNumber = working;
+        Button OnCalculateClicked = (Button)sender;
+        DisplayLabel.Text += OnCalculateClicked.Text;
+
+
+        if (DisplayLabel.Text.Contains("+"))
+        {
+            DisplayLabel.Text = (FirstNumber + LastNumber).ToString();
+            if (HiddenNumber != 0)
+            {
+                DisplayLabel.Text = (HiddenNumber + LastNumber).ToString();
+                HiddenNumber = double.Parse(DisplayLabel.Text);
+            }
+            else
+            {
+                HiddenNumber = double.Parse(DisplayLabel.Text);
+            }
+        }
+        else if (DisplayLabel.Text.Contains("-"))
+        {
+            DisplayLabel.Text = (FirstNumber - LastNumber).ToString();
+            if (HiddenNumber != 0)
+            {
+                DisplayLabel.Text = (HiddenNumber - LastNumber).ToString();
+                HiddenNumber = double.Parse(DisplayLabel.Text);
+            }
+            else
+            {
+                HiddenNumber = double.Parse(DisplayLabel.Text);
+            }
+        }
+        else if (DisplayLabel.Text.Contains("×"))
+        {
+            if (LastNumber == 0)
+            {
+                FirstNumber = 0;
+            }
+
+            DisplayLabel.Text = (FirstNumber * LastNumber).ToString();
+            if (HiddenNumber != 0)
+            {
+                DisplayLabel.Text = (HiddenNumber * LastNumber).ToString();
+                HiddenNumber = double.Parse(DisplayLabel.Text);
+            }
+            else
+            {
+                HiddenNumber = double.Parse(DisplayLabel.Text);
+            }
+        }
+        else if (DisplayLabel.Text.Contains("/"))
+        {
+            DisplayLabel.Text = (FirstNumber / LastNumber).ToString();
+            if (HiddenNumber != 0)
+            {
+                DisplayLabel.Text = (HiddenNumber / LastNumber).ToString();
+                HiddenNumber = double.Parse(DisplayLabel.Text);
+            }
+            else
+            {
+                HiddenNumber = double.Parse(DisplayLabel.Text);
+            }
         }
 
-        operand = 0;
+
+
     }
-
-    private void ClearButton(object sender, EventArgs e)
+    public void OnClearClicked(object sender, EventArgs e)
     {
-        Clear();
-    }
-
-    private void Clear()
-    {
-        accumulator = 0;
-        operand = 0;
-        operation = "";
-
-        EntryCalculations.Text = "";
-        EntryResult.Text = "0";
-    }
-
-    private void StoreInMemoryButton(object sender, EventArgs e)
-    {
-        EntryCalculations.Text = "Kommande funktion";
-    }
-
-    private void CatchFromMemoryButton(object sender, EventArgs e)
-    {
-        EntryCalculations.Text = "Kommande funktion";
+        DisplayLabel.Text = "";
+        FirstNumber = 0;
+        LastNumber = 0;
+        HiddenOperator = "";
+        HiddenNumber = 0;
     }
 
 }
